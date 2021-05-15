@@ -39,11 +39,11 @@ class EventController extends AbstractController
 
 
     ##################  Filter Controller  ###########################
-    #[Route('/filter/{id}', name: 'event_filter')]
-    public function filterAction($id): Response
+    #[Route('/filter/{type}', name: 'event_filter')]
+    public function filterAction($type): Response
     {
-        $events = $this->getDoctrine()->getRepository('App:Event')->findAll(['fkType' => $id]);
-        
+        $events = $this->getDoctrine()->getRepository('App:Event')->findBy(['fkType' => $type]);
+        // dd($events);
         return $this->render('event/filter.html.twig', array('events' => $events));
         
     }  
@@ -67,11 +67,11 @@ class EventController extends AbstractController
 
         ->add('schedulded', DateTimeType::class, array('label' => 'Scheduled', 'attr' => array('style'=>'margin-bottom:15px')))
 
-        ->add('image', TextType::class, array('required'=> false, 'attr' => array('style' => 'margin-bottom:15px')))
+        ->add('image', TextType::class, array('required'=> false, 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
 
         ->add('description', TextareaType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
 
-        ->add('capacity', IntegerType::class, array('attr' => array('style' => 'margin-bottom:15px')))
+        ->add('capacity', IntegerType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
 
                 ##for foreign key: ##
         ->add('fk_type', EntityType::class, [
@@ -194,11 +194,11 @@ class EventController extends AbstractController
 
         ->add('schedulded', DateTimeType::class, array('label' => 'Scheduled', 'attr' => array('style'=>'margin-bottom:15px')))
 
-        ->add('image', TextType::class, array('attr' => array('style' => 'margin-bottom:15px')))
+        ->add('image', TextType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
 
         ->add('description', TextareaType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
 
-        ->add('capacity', IntegerType::class, array('attr' => array('style' => 'margin-bottom:15px')))
+        ->add('capacity', IntegerType::class, array('attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
 
         ##for foreign key: ##
         ->add('fk_type', EntityType::class, [
