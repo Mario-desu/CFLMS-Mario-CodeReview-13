@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<hr>
+	<div class="container d-flex shadow-lg justify-content-center mb-5" id="heading-style">
+		<h2 class="text text-center p-2">Event Details</h2>
+	</div>
+	<div class="container d-flex justify-content-center detail-wrapper">
+		<div class="row">
+			<div class="col-sm-4 my-3">
+				<div class="card p-2 detail-card" id="shadowCard" style="width: 30rem;">
+					<img src="/images/{{event.image}}" class="card-img-top" alt="{{event.name}}">
+					<div class="card-body">
+						<h5 class="card-title">{{event.name}}</h5>
+						<p class="card-text">{{event.schedulded|date('F j, Y, g:i a')}}.</p>
+						<p class="card-text">{{event.description}}</p>
+						<p class="card-text">{{event.fkType.name}}</p>
+                        <p class="card-text">{{event.address}}</p>
+                        <p class="card-text"><i class="fas fa-phone"></i> {{event.phone}}</p>
+                        <p class="card-text"><i class="far fa-envelope"></i> {{event.email}}</p>
+                        <p class="card-text"><a href="{{event.url}}">{{event.url}}</a></p>          
+						        						
+
+						<a href="/" class="btn detail-btn">Back to all events</a>
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,133 @@
+*{
+    font-family: 'KoHo', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+     
+ }
+ a {
+    text-decoration: none ;
+
+ }
+ 
+ body {
+    /* background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"); */
+    background-image: url("https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    background-size: cover;
+   }
+
+
+
+#navi {
+    background-color: RGBA(114, 96, 128,0.5);
+ 
+}
+
+.nav-link {
+
+    font-size: 1.3em;
+}
+
+.logo:hover {
+        -webkit-transform:scale(1.10);
+    -moz-transform:scale(1.10);
+    -ms-transform:scale(1.10);
+    -o-transform:scale(1.10);
+    transform:scale(1.10);
+}
+
+
+.nav-link:hover {
+    -webkit-transform:scale(1.10);
+-moz-transform:scale(1.10);
+-ms-transform:scale(1.10);
+-o-transform:scale(1.10);
+transform:scale(1.10);
+}
+
+
+#heading-style {
+   width: 30rem;
+}
+
+
+ 
+ /*buttons home*/
+ 
+ 
+ .card .detail-btn {
+    background-color: #726080;
+    color: whitesmoke;
+ }
+ 
+ .card .del-btn {
+    color: red;
+ }
+ 
+ .card .edit-btn {
+    color: darkgreen;
+ }
+ /******************/
+
+
+ #shadowCard, #heading-style, #form1 {
+    background: rgba( 255, 255, 255, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 0.8em;
+ }
+ 
+ .hoverCard:hover {
+    
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+ } 
+ 
+
+ 
+ 
+ 
+ .img-style {
+    width: 100%; /* or 100% of container */
+    height: 50%; /*  or 100% of container */
+    object-fit: cover; /* none can be an option too as cover may deform it*/
+    object-position: 50% 50%; /* if both 50% will center it*/
+    
+ }
+ 
+ .index-wrapper,.detail-wrapper {
+     margin-bottom: 25vh;
+ }
+
+
+.create-wrapper, .edit-wrapper {
+
+    padding-bottom: 15vh;
+ }
+ 
+ .detail-card {
+    width: 70vw !important;
+ 
+ }
+ 
+ footer {
+    background-color: RGBA(113,158,191,0.3);
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+ 
+ }
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+ 

@@ -1,0 +1,16 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	<div class="container d-flex justify-content-center m-4 create-wrapper">
+		<div class="form-control p-4 m-4" id="form1">
+			<h2 class="page-header">Add Event</h2>
+			{{form_start(form)}}
+
+			{{form_widget(form)}}
+
+			{{form_end(form)}}
+		</div>
+	</div>
+{% endblock %}
